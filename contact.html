@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Crystaline</title>
+    <link rel="icon" href="Black_Minimalist_Crystal_Logo-removebg-preview (1).png">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* NAVBAR - Matched to Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(202, 202, 204, 0.95);
+            padding: 0 30px;
+            height: 80px;
+            border-bottom: 1px solid #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #logo2 {
+            height: 100px;
+            width: 110px;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            padding-right: 20px;
+        }
+
+        .nav-links li a {
+            position: relative;
+            text-decoration: none;
+            color: #0e1118;
+            font-size: 16px;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #5c5a59;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover::after { width: 100%; }
+        .nav-links li a:hover { color: #3e4247; cursor: pointer; }
+
+        /* Header / Banner Section */
+        .head {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .img3 {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .heading {
+            padding: 40px 0 20px;
+            font-size: 3rem;
+            font-family: 'Century', serif;
+            text-align: center;
+            width: 100%;
+            background-color: white;
+            color: #000;
+        }
+
+        /* Contact Wrapper - Centered */
+        .contact-wrapper {
+            max-width: 900px;
+            margin: 40px auto 80px; /* Centers the card horizontally */
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 1fr 1.2fr; /* Balanced proportions */
+            overflow: hidden;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #72678b, #442a50);
+            color: #fff;
+            padding: 40px;
+        }
+
+        .contact-info h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-family: 'Century', serif;
+        }
+
+        .info-item {
+            margin: 25px 0;
+            line-height: 1.6;
+        }
+
+        /* Form Panel */
+        .contact-form {
+            padding: 40px;
+        }
+
+        .contact-form h2 {
+            color: #1b1e33;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            font-size: 15px;
+            background: #fdfdfd;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #72678b;
+            outline: none;
+            box-shadow: 0 0 5px rgba(114, 103, 139, 0.2);
+        }
+
+        textarea { height: 100px; resize: none; }
+
+        .button5 {
+            width: 100%; /* Full width for better mobile tap */
+            height: 45px;
+            margin-top: 25px;
+            background: #442a50;
+            border: none;
+            border-radius: 8px;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button5:hover {
+            background: #5f4e9b;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: rgba(165, 164, 167, 0.95);
+            padding: 60px 20px 25px;
+            border-top: 1px solid #ccc;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo1 {
+            height: 100px;
+            width: auto;
+            border-radius: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 13px;
+            color: #444;
+            margin-top: 40px;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                margin: 20px;
+            }
+            .nav-links { display: none; }
+            .heading { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <img id="logo2" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Crystal Logo">
+    <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="newarrival.html">New arrival</a></li>
+        <li><a href="specialoffer.html">Special offers</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+
+<header class="head">
+    <img class="img3" src="amethyst-crystals-soft-focus-abstract-background_1123896-126996.jpg" alt="Contact Banner">
+    <h1 class="heading">Contact Us</h1>
+</header>
+
+<div class="contact-wrapper">
+    <div class="contact-info">
+        <h2>Crystalline</h2>
+        <p>Premium "CRYSTAL" & diamond jewellery with trust, purity, and elegance.</p>
+
+        <div class="info-item">
+            <strong>📍 Address</strong><br>
+            Main commercial Market, Karachi<br>
+            Gulshan e hadeed phase 1 
+        </div>
+
+        <div class="info-item">
+            <strong>📞 Phone</strong><br>
+            +92 321 3591233
+        </div>
+
+        <div class="info-item">
+            <strong>✉ Email</strong><br>
+            info@crystalline.com
+        </div>
+
+        <div class="info-item">
+            <strong>🕒 Timings</strong><br>
+            Mon – Sat: 10:00 AM – 12:00 AM<br>
+            Sunday: Closed
+        </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Get in Touch</h2>
+        <form>
+            <label>Your Name</label>
+            <input type="text" placeholder="Enter your name" required>
+
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter phone number">
+
+            <label>Your Message</label>
+            <textarea placeholder="Write your message..." required></textarea>
+
+            <button class="button5" type="submit">Send Message</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <img class="logo1" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Logo">
+            <p>Creating modern, clean & elegant web experiences.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Navigation</h3>
+            <p>Home | About | Products | Contact</p>
+        </div>
+        <div class="footer-box">
+            <h3>Subscribe</h3>
+            <input type="email" placeholder="Your email" style="width:100%; padding:10px; border-radius:5px; border:none; margin-top:10px;">
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 Crystal UI | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
