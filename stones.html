@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"></meta>
+    <title>stones</title>
+    <link rel="stylesheet" href="index.css">
+      <link class="logo2" rel="icon" href="Black_Minimalist_Crystal_Logo-removebg-preview (1).png">
+</head>
+<style>
+*{
+    margin-left: 0px;
+    margin-bottom: 0px;
+    margin-right: 0px;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(202, 202, 204, 0.9);
+    border: 1px solid rgb(31, 25, 39);
+    position: relative;
+    height: 80px;
+}
+#logo2{
+height: 100px;
+  width: 110px;
+  margin-left: 20px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    text-align: center;
+    padding-right: 20px;
+}
+
+
+.nav-links li a {
+    position: relative;
+    text-decoration: none;
+    color: #0e1118;
+    font-size: 16px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background-color: #5c5a59;
+    transition: width 0.3s ease;
+}
+
+
+.nav-links li a:hover {
+    color: #34353a;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+.nav-links li a:hover {
+    color: #3e4247;
+    cursor: pointer;
+}
+
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #2d2b46;
+    padding-right: 15px;
+}
+
+
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: rgba(165, 164, 167, 0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+        border-bottom-left-radius: 10px;
+    }
+
+   
+}
+.nav-links {
+    list-style: none; 
+}
+
+  /* Footer - Constant */
+        .footer {
+            background-color: rgba(165, 164, 167, 0.95);
+            padding: 60px 5% 25px;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo1 { height: 100px; width: auto; border-radius: 10px; margin-bottom: 10px; }
+
+        .footer-bottom { text-align: center; margin-top: 40px; color: #444; font-size: 0.9rem; }
+
+
+/*  RESPONSIVE */
+
+/* tablet */
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+  }
+
+  .subscribe input {
+    margin-bottom: 10px;
+  }
+}
+.head{
+  height: 300px;
+  width: 100%;
+  
+}
+
+
+.logo1 {
+  height: 170px;
+  width: 200px;
+  margin-left: 30px;
+  transition: all 0.4s ease;
+  border-radius: 10px;
+  margin-top: 0px;
+}
+.p1{
+    margin-top: 0px;
+}
+
+.logo1:hover {
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.2);
+  cursor: pointer;
+}
+
+</style>
+<body>
+  <nav class="navbar">
+    <div><img id="logo2" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt=""></div>
+
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="newarrival.html">New arrival</a></li>
+        <li><a href="specialoffer.html">Special offers</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+         <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+<header class="head">
+  <img class="img3" src="tumble.jpg" alt="loading">
+  <h2 class="heading1">"Stones"</h2>
+
+<div class="container"><div id="div1"><div  class="div2"><img class="img1" src="MADU_003 155.jpg" alt=""><p class="name">Adularia</p></div>
+<div class="div2"><img class="img1" src="XAV_019 155.jpg" alt=""><p  class="name">Amethyst</p></div>
+<div class="div2"><img class="img1" src="Boracite 155.jpg" alt=""><p  class="name">Boracite</p></div>
+<div class="div2"><img class="img1" src="Benitoite 155.jpg" alt=""><p  class="name">Benitoite</p></div>
+<div class="div2"><img class="img1" src="Blue Chalcedony 155.jpg" alt=""><p  class="name">Chalcedony - Blue</p></div></div>
+<div id="div1"><div  class="div2"><img class="img1" src="Copper 155.jpg" alt=""><p  class="name">Copper</p></div>
+<div class="div2"><img class="img1" src="Danburite 155.jpg" alt=""><p  class="name">Danburite</p></div>
+<div class="div2"><img class="img1" src="Dioptase 155.jpg" alt=""><p  class="name">Dioptase</p></div>
+<div class="div2"><img class="img1" src="Eudialyte 155.jpg" alt=""><p  class="name">Eudialyte</p></div>
+<div class="div2"><img class="img1" src="Emerald 155.jpg" alt=""><p  class="name">Emerald</p></div></div>
+<div id="div1"><div  class="div2"><img class="img1" src="Fluellite 155.jpg" alt=""><p  class="name">Fluellite</p></div>
+<div class="div2"><img class="img1" src="Fluorite venus 155.jpg" alt=""><p  class="name">Fluorite - Venus</p></div>
+<div class="div2"><img class="img1" src="Gold 155 .jpg" alt=""><p  class="name">Gold</p></div>
+<div class="div2"><img class="img1" src="Goshenite 155.jpg" alt=""><p  class="name">Goshenite</p></div>
+<div class="div2"><img class="img1" src="Herkimer 155.jpg" alt=""><p >Herkimer Diamond</p></div></div>
+<div id="div1"><div  class="div2"><img class="img1" src="Hiddenite 155.jpg" alt=""><p  class="name">Hiddenite</p></div>
+<div class="div2"><img class="img1" src="Inderite 155.jpg" alt=""><p  class="name">Inderite</p></div>
+<div class="div2"><img class="img1" src="Larimar 155.jpg" alt=""><p  class="name">Larimar</p></div>
+<div class="div2"><img class="img1" src="Lollingite 155.jpg" alt=""><p  class="name">Lollingite</p></div>
+<div class="div2"><img class="img1" src="Mesolite 155.jpg" alt=""><p  class="name">Mesolite</p></div></div>
+<div id="div1"><div  class="div2"><img class="img1" src="Moonstone 155.jpg" alt=""><p  class="name">Moonstone</p></div>
+<div class="div2"><img class="img1" src="Muscovite 155.jpg" alt=""><p  class="name">Muscovite</p></div>
+<div class="div2"><img class="img1" src="Morganite 155.jpg" alt=""><p  class="name">Morganite</p></div>
+<div class="div2"><img class="img1" src="Oligoclase 155.jpg" alt=""><p  class="name">Oligoclase</p></div>
+<div class="div2"><img class="img1" src="Pollucite 155.jpg" alt=""><p  class="name">Pollucite</p></div></div>
+<div id="div1"><div  class="div2"><img class="img1" src="QRA021s.jpg" alt=""><p  class="name">Quartz</p></div>
+<div class="div2"><img class="img1" src="120_roscoelite-healing-crystal_9.jpg" alt=""><p  class="name">Roscoelite</p></div>
+<div class="div2"><img class="img1" src="silver 155.jpg" alt=""><p  class="name">silver</p></div>
+<div class="div2"><img class="img1" src="Topaz 155.jpg" alt=""><p  class="name">Topaz</p></div>
+<div class="div2"><img class="img1" src="Tugtupite 155.jpg" alt=""><p  class="name">Tugtupite</p></div></div></div>
+
+<!-- Footer -->
+ <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <img class="logo1" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Logo">
+            <p>Creating modern, clean & elegant web experiences.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Navigation</h3>
+            <p>Home | About | Products | Contact</p>
+        </div>
+        <div class="footer-box">
+            <h3>Subscribe</h3>
+            <input type="email" placeholder="Your email" style="width:100%; padding:10px; border-radius:5px; border:none; margin-top:10px;">
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 Crystal UI | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
