@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Arrivals | Crystaline</title>
+    <link rel="icon" href="Black_Minimalist_Crystal_Logo-removebg-preview (1).png">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+        }
+
+        /* NAVBAR - Matched to Special Offers */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(202, 202, 204, 0.95);
+            padding: 0 30px;
+            height: 80px;
+            border-bottom: 1px solid #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #logo2 {
+            height: 100px;
+            width: 110px;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            padding-right: 20px;
+        }
+
+        .nav-links li a {
+            position: relative;
+            text-decoration: none;
+            color: #0e1118;
+            font-size: 16px;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover Line Effect */
+        .nav-links li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #5c5a59;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links li a:hover {
+            color: #3e4247;
+            cursor: pointer;
+        }
+
+        /* Header / Banner Section */
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .img3 {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .heading {
+            padding: 50px 0;
+            font-size: 3rem;
+            font-family: 'Century', serif;
+            text-align: center;
+            width: 100%;
+            background-color: white;
+            color: #000;
+        }
+
+        /* Centered Product Grid */
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto 100px auto;
+            padding: 0 20px;
+        }
+
+        .div4 {
+            flex: 0 1 300px;
+            text-align: center;
+            transition: 0.4s ease;
+        }
+
+        .div4:hover {
+            transform: scale(1.05);
+        }
+
+        .img2 {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .para {
+            margin-top: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Century', sans-serif;
+        }
+
+        .para1 {
+            margin: 8px 0;
+            font-size: 1rem;
+        }
+
+        .btn1 {
+            background-color: #111;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn1:hover {
+            background-color: #444;
+        }
+
+        /* FOOTER - Matched to Special Offers */
+        .footer {
+            background-color: rgba(165, 164, 167, 0.95);
+            padding: 60px 5% 25px;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo1 {
+            height: 100px;
+            width: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            color: #444;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Navbar */
+        .menu-toggle {
+            display: none;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+            .heading { font-size: 2rem; padding: 30px 0; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <img id="logo2" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Crystaline Logo">
+    <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="newarrival.html">New arrival</a></li>
+        <li><a href="specialoffer.html">Special offers</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</nav>
+
+<header>
+    <img class="img3" src="logo.jpg" alt="Jewelry Banner">
+    <h1 class="heading">New Arrival</h1>
+</header>
+
+<div class="product-container">
+    <div class="div4">
+        <img class="img2" src="Blue-Diamond.jpg" alt="Diamond">
+        <p class="para">Diamond</p>
+        <p class="para1"><b>Pkr: 8,000</b></p>
+        <a href="checkout.html"><button class="btn1">Add to cart</button></a>
+    </div>
+
+    <div class="div4">
+        <img class="img2" src="Blue sapphire-Neelam.jfif" alt="Sapphire">
+        <p class="para">Sapphire (Neelam)</p>
+        <p class="para1"><b>Pkr: 8,000</b></p>
+        <a href="checkout.html"><button class="btn1">Add to cart</button></a>
+    </div>
+
+    <div class="div4">
+        <img class="img2" src="rubyy.jfif" alt="Ruby">
+        <p class="para">Ruby (Yaqoot)</p>
+        <p class="para1"><b>Pkr: 27,150</b></p>
+        <a href="checkout.html"><button class="btn1">Add to cart</button></a>
+    </div>
+
+    <div class="div4">
+        <img class="img2" src="Blue Topaz.jpg" alt="Topaz">
+        <p class="para">Blue Topaz</p>
+        <p class="para1"><b>Pkr: 27,630</b></p>
+        <a href="checkout.html"><button class="btn1">Add to cart</button></a>
+    </div>
+
+    <div class="div4">
+        <img class="img2" src="TourMaline.jfif" alt="Tourmaline">
+        <p class="para">Tourmaline</p>
+        <p class="para1"><b>Pkr: 17,280</b></p>
+        <a href="checkout.html"><button class="btn1">Add to cart</button></a>
+    </div>
+
+    <div class="div4">
+        <img class="img2" src="Amethyst.jfif" alt="Amethyst">
+        <p class="para">Natural Amethyst</p>
+        <p class="para1"><b>Pkr: 8,000</b></p>
+        <a href="checkout.html"><button class="btn1">Add to cart</button></a>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <img class="logo1" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Logo">
+            <p>Creating modern, clean & elegant web experiences.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Navigation</h3>
+            <p>Home | About | Products | Contact</p>
+        </div>
+        <div class="footer-box">
+            <h3>Subscribe</h3>
+            <input type="email" placeholder="Your email" style="width:100%; padding:10px; border-radius:5px; border:none; margin-top:10px;">
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 Crystal UI | All Rights Reserved</p>
+</footer>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
