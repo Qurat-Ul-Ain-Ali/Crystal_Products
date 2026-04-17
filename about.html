@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Crystaline</title>
+    <link rel="icon" href="Black_Minimalist_Crystal_Logo-removebg-preview (1).png">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR - Matched to Home Page */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(202, 202, 204, 0.95);
+            padding: 0 30px;
+            height: 80px;
+            border-bottom: 1px solid #222;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #logo2 {
+            height: 100px;
+            width: 110px;
+            margin-left: 20px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 50px;
+            padding-right: 20px;
+        }
+
+        .nav-links li a {
+            position: relative;
+            text-decoration: none;
+            color: #0e1118;
+            font-size: 16px;
+            padding: 5px 0;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a::after {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            background-color: #5c5a59;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links li a:hover::after { width: 100%; }
+        .nav-links li a:hover { color: #3e4247; }
+
+        /* Banner Section */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .img5 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .about-overlay {
+            margin-left: 10%;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 400px;
+        }
+
+        .about-overlay h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-family: 'Century', serif;
+        }
+
+        /* Layout Sections */
+        .content-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 10%;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .content-section:nth-child(even) {
+            flex-direction: row-reverse;
+            background-color: #f9f9f9;
+        }
+
+        .text-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .text-box h2, .text-box h5 {
+            font-family: 'Century', serif;
+            margin-bottom: 15px;
+        }
+
+        .text-box h5 { color: #888; text-transform: uppercase; letter-spacing: 2px; }
+
+        .image-box {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .image-box img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+            /* Footer - Constant */
+        .footer {
+            background-color: rgba(165, 164, 167, 0.95);
+            padding: 60px 5% 25px;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo1 { height: 100px; width: auto; border-radius: 10px; margin-bottom: 10px; }
+
+        .footer-bottom { text-align: center; margin-top: 40px; color: #444; font-size: 0.9rem; }
+
+       
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .content-section { padding: 40px 5%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <img id="logo2" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Logo">
+    <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="newarrival.html">New arrival</a></li>
+        <li><a href="specialoffer.html">Special offers</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="checkout.html">Checkout</a></li>
+    </ul>
+</nav>
+
+<header class="hero-section">
+    <img class="img5" src="photo-1.jpg" alt="Banner">
+    <div class="about-overlay">
+        <h2>About Us</h2>
+        <p>We are a brand which has been born into mother nature. It's time to create a new feeling.</p>
+    </div>
+</header>
+
+<section class="content-section">
+    <div class="text-box">
+        <h2>Our Story</h2>
+        <p>We're a family-run business based in the UK, passionate about sharing the joy and beauty of crystals with others. Our friendly team is always ready to help you find the perfect crystal for your journey.</p>
+    </div>
+    <div class="image-box">
+        <img src="story.jpg" alt="Our Story">
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="text-box">
+        <h5>How is our Quality Work?</h5>
+        <h2>Quality of Stone Setting</h2>
+        <p>Our Stone Settings are Master level. We set stones properly inside/under the silver without any glue, ensuring they will not fall out easily. Quality is our signature.</p>
+    </div>
+    <div class="image-box">
+        <img src="quality1.jpg" alt="Quality Work">
+    </div>
+</section>
+
+<section class="content-section">
+    <div class="text-box">
+        <h5>The Healing Power Of</h5>
+        <h2>GEMSTONES</h2>
+        <p>Crystals are used to enhance the body's own healing abilities, reduce stress, and improve the quality of your life. They hold a massive amount of energy and unique individual personalities.</p>
+    </div>
+    <div class="image-box">
+        <img src="stones.jpg" alt="Gemstones">
+    </div>
+</section>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-box">
+            <img class="logo1" src="Black_Minimalist_Crystal_Logo-removebg-preview (1).png" alt="Logo">
+            <p>Creating modern, clean & elegant web experiences.</p>
+        </div>
+        <div class="footer-box">
+            <h3>Navigation</h3>
+            <p>Home | About | Products | Contact</p>
+        </div>
+        <div class="footer-box">
+            <h3>Subscribe</h3>
+            <input type="email" placeholder="Your email" style="width:100%; padding:10px; border-radius:5px; border:none; margin-top:10px;">
+        </div>
+    </div>
+    <p class="footer-bottom">© 2026 Crystal UI | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
